@@ -1,0 +1,5 @@
+<app-product-form (add)="addProduct($event)"> </app-product-form>
+<app-product-filter (selected)="onSelected($event)"></app-product-filter>
+<div *ngFor="let product of products">
+  <app-product-item [product]="product"></app-product-item>
+</div>
