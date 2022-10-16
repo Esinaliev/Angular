@@ -1,7 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {Product} from "../../entity/product";
+import {Category, Product} from "../../../entity/moduls";
 import { NgForm } from "@angular/forms";
-import {Category} from "../../entity/category";
 
 
 @Component({

@@ -1,4 +1,15 @@
-import {Category} from "./category";
+export interface Album{
+  id: number;
+  userId: number;
+  title: string;
+}
+
+export enum Category{
+  nothing = "nothing",
+  important="important",
+  possiblyImportant="possibly important",
+  noMatter="no matter",
+}
 
 export interface Product{
   id: number;

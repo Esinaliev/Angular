@@ -1,0 +1,12 @@
+<div *ngIf="loaded && album">
+  <h2>Post Details</h2>
+  <p class="form-control" name="userId"> {{album.userId}}</p>
+  <input class="form-control" name="title" type="text" [(ngModel)]="album.title">
+  <button class="btn btn-success" (click)="updatePost()">Update</button>
+</div>
+
+<div *ngIf="!loaded">
+  <div class="spinner-border text-primary" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>

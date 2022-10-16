@@ -1,0 +1,33 @@
+<h1>Albums list</h1>
+
+<div *ngIf="loaded">
+  <form class="card">
+    <input name="title" class="form-control" type="text" [(ngModel)]="newAlbum">
+    <button class="btn btn-primary" (click)="addAlbum()">Add post</button>
+  </form>
+
+  <button class="btn-primary" (click)="checkStatus()">Check Status</button>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Remove</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let album of albums">
+      <th  scope="row">{{album.id}}</th>
+      <td [routerLink]="['/posts', album.id]">{{album.title}}</td>
+      <td class="btn-danger" (click)="deletePost(album.id)">X</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="!loaded">
+  <div class="spinner-border text-primary" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>

@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
-import {Product, products} from "../../entity/product";
-import {Category} from "../../entity/category";
+import {Category, Product, products} from "../../../entity/moduls";
 
 @Component({
   selector: 'app-product-list',

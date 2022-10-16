@@ -1,5 +1,5 @@
 <div *ngIf="product">
-  <a href="" [title]="product.description">
+  <a routerLink="product/{{product.id}}" [title]="product.description">
     <h1>{{ product.name }}</h1>
     <h5>{{ product.price }}</h5>
   </a>
