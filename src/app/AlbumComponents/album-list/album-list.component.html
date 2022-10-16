@@ -13,13 +13,14 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Title</th>
+      <th scope="col">Info</th>
       <th scope="col">Remove</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let album of albums">
       <th  scope="row">{{album.id}}</th>
-      <td [routerLink]="['/posts', album.id]">{{album.title}}</td>
+      <td><a [routerLink]="['/album', album.id]">{{album.title}}</a></td>
       <td class="btn-danger" (click)="deletePost(album.id)">X</td>
     </tr>
     </tbody>
