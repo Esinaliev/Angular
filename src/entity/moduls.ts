@@ -3,6 +3,13 @@ export interface Album{
   userId: number;
   title: string;
 }
+export interface Photo {
+  albumId: number;
+  id: number;
+  title: string;
+  url: string;
+  thumbnailUrl: string;
+}
 
 export enum Category{
   nothing = "nothing",

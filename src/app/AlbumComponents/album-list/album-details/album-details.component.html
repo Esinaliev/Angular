@@ -3,6 +3,8 @@
   <p class="form-control" name="userId"> {{album.userId}}</p>
   <input class="form-control" name="title" type="text" [(ngModel)]="album.title">
   <button class="btn btn-success" (click)="updatePost()">Update</button>
+  <br><br>
+  <a [routerLink]="['/album', album.id, 'photos']">All photos</a>
 </div>
 
 <div *ngIf="!loaded">
@@ -10,3 +12,4 @@
     <span class="sr-only">Loading...</span>
   </div>
 </div>
+<router-outlet></router-outlet>

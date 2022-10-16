@@ -11,6 +11,7 @@ import { ProductFormComponent } from './productsCopmponents/product-form/product
 import {FormsModule} from "@angular/forms";
 import { AlbumDetailsComponent } from './AlbumComponents/album-list/album-details/album-details.component';
 import { AlbumListComponent } from './AlbumComponents/album-list/album-list.component';
+import { PhotoComponent } from './AlbumComponents/photo/photo.component';
 
 
 
@@ -22,7 +23,8 @@ import { AlbumListComponent } from './AlbumComponents/album-list/album-list.comp
     ProductFilterComponent,
     ProductFormComponent,
     AlbumDetailsComponent,
-    AlbumListComponent
+    AlbumListComponent,
+    PhotoComponent
   ],
     imports: [
         BrowserModule,

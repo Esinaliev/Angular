@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Album} from "../../entity/moduls";
+import {Album, Photo} from "../../entity/moduls";
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 
@@ -31,6 +31,12 @@ export class AlbumService {
 
   deleteAlbum(id: number): Observable<any> {
     return this.client.delete(`${this.base_url}/${id}`)
+  }
+
+  getAlbumPhotos(id: number): Observable<Photo[]> {
+    let url = `${this.base_url}/${id}/photos`
+    console.log(url);
+    return this.client.get<Photo[]>(url);
   }
 
   checkStatus(): any {
